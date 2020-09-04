@@ -1,0 +1,372 @@
+/*global styles*/
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-size: 16px;
+    color: #000;
+    line-height: 1.5;
+  }
+
+  .container {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .container-fluid {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .flex-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        /* -ms-flex-flow: row wrap;
+            flex-flow: row wrap; */
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .flex-item {
+    -ms-flex-preferred-size: 33.33%;
+        flex-basis: 33.33%;
+    -ms-flex: auto;
+    width: 259px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  .section-logo .flex-item {
+    -ms-flex-preferred-size: 22%;
+        flex-basis: 22%;
+    width: 25%;
+  }
+
+  a {
+      cursor: pointer;
+      text-decoration: none;
+  }
+
+  a:visited,
+  a:link {
+      color: inherit;
+  }
+
+  .centering {
+    text-align: center;
+  }
+
+  .section {
+    margin: 80px auto;
+  }
+
+/* hero section */
+
+.hero-image {
+  width: 100%;
+  height: auto;
+}
+
+.hero-image-mobile {
+  display: none;
+}
+
+.hero-section {
+  position: relative;
+  padding: 0 20px;
+}
+
+.heading-wrapper {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 10%;
+}
+
+
+.heading-big {
+  font-size: calc(18px + (70 - 18) * ((100vw - 300px) / (1440 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1440 - 300)));
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.heading-medium {
+  font-size: calc(16px + (45 - 16) * ((100vw - 300px)/(1440 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1440 - 300)));
+  text-transform: capitalize;
+}
+
+.heading-small {
+  font-size: calc(14px + (40 - 14) * ((100vw - 300px) / (1440 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1440 - 300)));
+  color: #E3FA1B;
+  text-transform: capitalize;
+}
+
+
+/*product section*/
+
+.section-products-mobile {
+  display: none;
+}
+
+.product-wrapper img {
+  max-height: 100%;
+  max-width: 100%;
+  margin-top: 50px;
+}
+
+.color-container {
+  display: inline-block;
+}
+
+.color {
+  display: inline-block;
+  width: 50px;
+}
+.color-black {
+  color: #000;
+}
+
+.color-blue {
+  color: #0000ff;
+}
+
+.section-products-mobile .color-blue {
+  display: none;
+}
+
+.color-red {
+  color: #ff0000;
+}
+
+.section-products-mobile .color-red {
+  display: none;
+}
+
+/*logo section*/
+
+.cta-text {
+  display: inline-block;
+  margin: 5px;
+  position: relative;
+}
+
+.cta-text img {
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.cta-text:hover img {
+  -webkit-filter: blur(2px) brightness(60%);
+          filter: blur(2px) brightness(60%);
+}
+
+.cta-text :not(img) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #000;
+  text-align: center;
+  width: 100%;
+}
+
+.cta-text p {
+  top: 43%;
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.cta-text .tehnomedia-paragraph {
+  top: 50%;
+}
+
+.logo-link {
+  display: inline-block;
+  width: 230px;
+  height: 100px;
+}
+
+.logo-link:hover > p {
+  opacity: 1;
+  color: #fff;
+  font-weight: 500;
+}
+
+.tehnomedia-logo {
+  -webkit-box-shadow: 0px 5px 8px 1px rgba(0,0,0,0.15);
+          box-shadow: 0px 5px 8px 1px rgba(0,0,0,0.15);
+  width: 212px;
+  height: 75px;
+  margin-top: 12px;
+  margin-left: 15px;
+}
+
+/*responsive*/
+
+@media (max-width: 1024px) {
+      .container {
+          width: 88%;
+      }
+    }
+
+@media (max-width: 1200px) {
+
+/*logo section*/
+      .section-logo .flex-item {
+        margin: 0 auto;
+        width: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+        text-align: center;
+      }
+
+      .flex-row {
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+      }
+    }
+
+
+@media (max-width: 720px) {
+
+  /* hero section */
+  .hero-section {
+    padding: 0;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .hero-image-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .heading-wrapper {
+    z-index: 10;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    -webkit-transform: translatex(-50%);
+        -ms-transform: translatex(-50%);
+            transform: translatex(-50%);
+    width: 100vw;
+    text-align: center;
+
+  }
+
+  .heading-big {
+    font-size: calc(35px + (70 - 35) * ((100vw - 300px) / (1440 - 300)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1440 - 300)));
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+
+  .heading-medium {
+    font-size: calc(25px + (45 - 25) * ((100vw - 300px)/(1440 - 300)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1440 - 300)));
+    text-transform: capitalize;
+  }
+
+  .heading-small {
+    font-size: calc(14px + (40 - 14) * ((100vw - 300px) / (1440 - 300)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1440 - 300)));
+    color: #E3FA1B;
+    text-transform: capitalize;
+  }
+
+/*products section*/
+
+  .section-products-desktop {
+    display: none;
+  }
+
+  .section-products-mobile {
+    display: block;
+  }
+
+  .section-products-mobile .color-black {
+    font-weight: 900;
+  }
+
+  /*carousel*/
+
+.carousel-container {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding-top: 80px;
+  width: 50vw;
+}
+
+.carousel-slide {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  min-width: 50vw;
+}
+
+#prevBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  left: 5%;
+  cursor: pointer;
+}
+
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  right: 5%;
+  cursor: pointer;
+}
+
+/*logo section*/
+
+.tehnomedia-logo {
+  margin-top: 10px;
+  margin-left: 0;
+}
+}
